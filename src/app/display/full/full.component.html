@@ -1,11 +1,11 @@
 <form #fillForm="ngForm">
-  <input type="text" placeholder="Employee Name" [(ngModel)]="employeeName" />
+  <input type="text" placeholder="Employee Name" [(ngModel)]="employeeName" name="employeeName" />
   <button (click)="addEmp()">Add Employee</button>
 </form>
 <table>
   <thead>
     <tr>
-      <th>Employee</th>
+      <th class="emp-head">Employee</th>
       <th>Sunday</th>
       <th>Monday</th>
       <th>Tuesday</th>
@@ -18,13 +18,13 @@
   <tbody *ngFor="let row of employees">
     <tr>
       <td>{{ row.name }}</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
+      <td>x</td>
+      <td>{{ row.mon }}</td>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
       <td>
           <button (click)="removeEmp()">Remove Employee</button>
       </td>
