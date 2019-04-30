@@ -1,3 +1,33 @@
-<p>
-  full works!
-</p>
+<form #fillForm="ngForm">
+  <input type="text" placeholder="Employee Name" [(ngModel)]="employeeName" />
+  <button (click)="addEmp()">Add Employee</button>
+</form>
+<table>
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Sunday</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let row of employees">
+    <tr>
+      <td>{{ row.name }}</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>
+          <button (click)="removeEmp()">Remove Employee</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

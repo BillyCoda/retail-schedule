@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./full.component.css']
 })
 export class FullComponent implements OnInit {
+  employees = [{ name: 'A' }, { name: 'B' }];
+  employeeName: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  addEmp() {}
+
+  removeEmp() {
+    if (confirm('Are you sure?')) {
+      this.employees.pop();
+    }
   }
-
 }
